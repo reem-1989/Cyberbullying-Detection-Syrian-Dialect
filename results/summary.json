@@ -1,0 +1,8 @@
+{
+  "comments": 4241,
+  "categories": 13,
+  "train_rows": 2968,
+  "test_rows": 1273,
+  "vocabulary": 8503,
+  "best_model": "SGDClassifier"
+}
