@@ -1,3 +1,5 @@
+https://cyberbullying-detection-in-syrian-slang-by-data-mining-dphdpfe.streamlit.app/
+
 # Cyberbullying Detection in Syrian-Dialect Arabic
 
 Machine-learning models that detect and classify cyberbullying in Facebook comments written in **Syrian-dialect Arabic**, plus an interactive **Streamlit dashboard** to explore the results and test new comments.
