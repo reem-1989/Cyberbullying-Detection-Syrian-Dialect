@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.venv/
+venv/
+.DS_Store
+# Raw comments are not published (they contain real users' posts). Remove this line to publish the data.
+data/*.xlsx
