@@ -61,8 +61,13 @@ k[0].metric("Comments analyzed", f"{summary['comments']:,}")
 k[1].metric("Categories", summary["categories"])
 k[2].metric("Best model", best["model"].replace("Classifier", ""))
 k[3].metric("Test accuracy (13 classes)", f"{best['test_accuracy']:.1%}")
-k[4].metric("Precision: flagging bullying", f"{best['binary_precision']:.1%}",
-            help="Of the comments the best model flagged as bullying, the share that really were bullying.")
+top = res.loc[res["binary_precision"].idxmax()]
+NICE = {"MultinomialNB": "Naive Bayes"}
+k[4].metric(f"Top precision ({NICE.get(top['model'], top['model'].replace('Classifier', ''))})",
+            f"{top['binary_precision']:.1%}",
+            help=(f"{top['model']}: of the comments it flagged as bullying, {top['binary_precision']:.1%} really were bullying "
+                  f"(recall {top['binary_recall']:.0%}). The best overall model, {best['model']}, has "
+                  f"{best['binary_precision']:.1%} precision."))
 
 st.divider()
 
